@@ -46,7 +46,7 @@ class Ship extends Model<
   declare year_built?: number | null;
 
   get roles(): NonAttribute<string[]> {
-    return this.shiproles?.map( role => role.name) ?? [];
+    return this.shiproles?.map( role => role?.name ?? '') ?? [];
   }
 
   static initModel(sequelize: Sequelize) {
