@@ -66,6 +66,36 @@ export type Ship = {
   id: Scalars['ID'];
   image?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
+  abs?: Maybe<Scalars['Int']>;
+  attempted_landings?: Maybe<Scalars['Int']>;
+  course_deg?: Maybe<Scalars['Int']>;
+  home_port?: Maybe<Scalars['String']>;
+  imo?: Maybe<Scalars['Int']>;
+  missions?: Maybe<Array<Maybe<ShipMission>>>;
+  mmsi?: Maybe<Scalars['Int']>;
+  model?: Maybe<Scalars['String']>;
+  position?: Maybe<ShipLocation>;
+  roles?: Maybe<Array<Maybe<Scalars['String']>>>;
+  speed_kn?: Maybe<Scalars['Float']>;
+  status?: Maybe<Scalars['String']>;
+  successful_landings?: Maybe<Scalars['Int']>;
+  type?: Maybe<Scalars['String']>;
+  url?: Maybe<Scalars['String']>;
+  weight_kg?: Maybe<Scalars['Int']>;
+  weight_lbs?: Maybe<Scalars['Int']>;
+  year_built?: Maybe<Scalars['Int']>;
+};
+
+export type ShipLocation = {
+  __typename?: 'ShipLocation';
+  latitude?: Maybe<Scalars['Float']>;
+  longitude?: Maybe<Scalars['Float']>;
+};
+
+export type ShipMission = {
+  __typename?: 'ShipMission';
+  flight?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
 };
 
 export type ShipsInput = {

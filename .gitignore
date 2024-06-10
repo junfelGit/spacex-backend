@@ -26,3 +26,4 @@ mysqldata
 *.mobileprovision
 *.pem
 *.pkey
+config/config.json

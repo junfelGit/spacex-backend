@@ -4,6 +4,10 @@ import { DataTypeAbstract, ModelAttributeColumnOptions } from 'sequelize';
 import { User } from './User';
 import { Address } from './Address';
 import { Ship } from './ship';
+import { Mission } from './mission';
+import { Role } from './role';
+import { ShipRole } from './shiprole';
+import { ShipLocation } from './shiplocation';
 
 declare global {
   type SequelizeAttributes<T extends { [key: string]: any }> = {
@@ -28,6 +32,10 @@ const db = {
   User: User.initModel(sequelize),
   Address: Address.initModel(sequelize),
   Ship: Ship.initModel(sequelize),
+  Mission: Mission.initModel(sequelize),
+  Role: Role.initModel(sequelize),
+  ShipRole: ShipRole.initModel(sequelize),
+  ShipLocation: ShipLocation.initModel(sequelize),
 };
 
 Object.keys(db).map(key => {
